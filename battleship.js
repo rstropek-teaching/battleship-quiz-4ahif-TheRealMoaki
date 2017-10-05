@@ -35,6 +35,8 @@ $(() => {
       positionValid = false;
 
       while (!positionValid) {
+        // Note that Math.random returns a value between 0 (including) and 1 (EXCLUDING). So your
+        // algorithm will never place ships in index 9 -> this makes your battleship much easier to play on.
         startPointX = Math.round(Math.random() * (9 - 0) + 0);
         startPointY = Math.round(Math.random() * (9 - 0) + 0);
         directionIndex = Math.round(Math.random() * (3 - 0) + 0);
